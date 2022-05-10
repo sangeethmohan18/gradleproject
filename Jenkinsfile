@@ -61,21 +61,7 @@ pipeline {
 		}
 
 				
-		stage(" Archive artifact"){
-
-			steps {
-
-				archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false, fingerprint: true,onlyIfSuccessful: true
-
-
-
-			}
-
-
-
-
-		}
-
+		
 
 
 				
