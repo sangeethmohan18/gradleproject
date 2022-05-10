@@ -8,9 +8,7 @@ pipeline{
 
 			steps {
             	
-            	checkout
-
-            	([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sangeethmohan18/gradleproject.git']]])
+            	checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sangeethmohan18/gradleproject.git']]])
 
             	sh "echo "CLONED SUCCESSFULLY"
 
@@ -32,7 +30,7 @@ pipeline{
 
 
 
-				}
+			}
 		}
 
     post {
@@ -45,7 +43,7 @@ pipeline{
     	}
 
     	failure {
-    	
+
     		slackSend channel: 'jen-slackintegration', message: 'Build failed'
 
 
