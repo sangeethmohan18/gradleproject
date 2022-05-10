@@ -20,7 +20,7 @@ pipeline{
 
 			steps{
 
-				sh "cd $WORKSPACE/Gradleproject/start"
+				sh "cd start"
 
 				sh "./gradlew clean build"
 
