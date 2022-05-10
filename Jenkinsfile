@@ -31,24 +31,24 @@ pipeline{
 			}
 		}
 
-	post {
+		post {
 
 
-		success {
+			success {
 
-			slackSend channel: 'jen-slackintegration', message: 'Build completed successfully'
+				slackSend channel: 'jen-slackintegration', message: 'Build completed successfully'
 
-		}
+			}
 
-		failure {
+			failure {
 
-			slackSend channel: 'jen-slackintegration', message: 'Build failed'		
+				slackSend channel: 'jen-slackintegration', message: 'Build failed'		
 			
 
-		}
+			}
 
 
-	} 
+		} 
 
 
 
