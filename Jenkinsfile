@@ -20,7 +20,7 @@ pipeline{
 
 			steps{
 
-				sh "cd start && ./gradlew clean build"
+				sh "start/gradlew clean build"
 
 				slackSend channel: 'jen-slackintegration', message: 'Build started'
 
