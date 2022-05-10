@@ -10,7 +10,7 @@ pipeline{
             	
             	checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sangeethmohan18/gradleproject.git']]])
 
-            	sh "echo "CLONED SUCCESSFULLY"
+            	sh "echo "CLONED SUCCESSFULLY""
 
 
 		    }
